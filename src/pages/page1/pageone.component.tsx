@@ -1,20 +1,19 @@
 import { IUser } from "../../models/user.interface";
-import { useContext } from "../../services/store/context/context.service";
+import { StateChager } from "../../services/store/context/globalcontext.service";
 import "./pageone.style.css";
 
 export const PageOneComponent = () => {
-  // const changer = new StateChager();
-  const [getContext, setContext] = useContext();
+  const changer = new StateChager();
 
   const handleChangeUser = (props: IUser) => {
-    setContext(props);
+    changer.state = props;
   };
 
   return (
     <div id="pageonesection">
       <h1>This is Page 1</h1>
-      <h2>User Logged: {getContext()?.name}</h2>
-      <h2>Age of User: {getContext()?.age}</h2>
+      <h2>User Logged: {changer.state?.name}</h2>
+      <h2>Age of User: {changer.state?.age}</h2>
       <br />
       <br />
       <br />

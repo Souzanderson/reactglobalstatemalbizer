@@ -35,13 +35,15 @@ export class GlobalStateController extends Component<any, any> {
         JSON.stringify(this.stater.state)
       ) {
         console.log("change on global!");
-
+        // console.log(JSON.stringify(this.state.actual_state));
+        // console.log(JSON.stringify(this.stater.state));
+        
         this.setState({
           actual_state: this.stater.state,
           changer: !this.state.changer,
         });
       }
-    }, 100);
+    }, 500);
   }
 
   render(): ReactNode {

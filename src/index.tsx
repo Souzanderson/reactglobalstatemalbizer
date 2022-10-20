@@ -3,16 +3,16 @@ import ReactDOM from "react-dom/client";
 import { App } from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { GlobalContextController } from "./services/store/context/context.service";
+import { GlobalStateController } from "./services/store/context/globalcontext.service";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <GlobalContextController>
+    <GlobalStateController>
       <App />
-    </GlobalContextController>
+    </GlobalStateController>
   </React.StrictMode>
 );
 
