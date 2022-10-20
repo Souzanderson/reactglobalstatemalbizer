@@ -18,7 +18,7 @@ React Global State Controll, for controll your states using simple Hook:
 
 ## 3 - State Change
 
-* For change your global state, import and instance ```StateChager```, call set  ```StateChager().state``` for change state:
+* For change your global state, import ```StateChager```, using instance method ```StateChager.init('your_key_storage')``` define your key storage two save/get value,  call set  ```StateChager().setState('value_storage')``` for change state:
 
 
 ![Example](https://github.com/Souzanderson/reactglobalstatemalbizer/blob/main/read_me_files/img3.png?raw=true)

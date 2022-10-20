@@ -3,17 +3,19 @@ import { StateChager } from "../../services/store/context/globalcontext.service"
 import "./pageone.style.css";
 
 export const PageOneComponent = () => {
-  const changer = new StateChager();
+  const user = StateChager.init<IUser>("user");
+  const value = StateChager.init<number>("value");
 
   const handleChangeUser = (props: IUser) => {
-    changer.state = props;
+    user.setState(props);
   };
 
   return (
     <div id="pageonesection">
       <h1>This is Page 1</h1>
-      <h2>User Logged: {changer.state?.name}</h2>
-      <h2>Age of User: {changer.state?.age}</h2>
+      <h2>User Logged: {user.state?.name}</h2>
+      <h2>Age of User: {user.state?.age}</h2>
+      <h2>Value: {value.state}</h2>
       <br />
       <br />
       <br />
